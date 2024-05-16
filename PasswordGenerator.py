@@ -1,6 +1,7 @@
 import tkinter as tk
 import random
 import string
+
 def generate_password():
     length = int(length_entry.get())
     use_special_chars = special_chars_var.get()
@@ -21,21 +22,27 @@ def generate_password():
         return
     password = ''.join(random.choice(characters) for _ in range(length))
     result_label.config(text="Generated Password: " + password)
+    
 app = tk.Tk()
 app.title("Password Generator")
+
 length_label = tk.Label(app, text="Password Length:")
 length_label.pack()
+
 length_entry = tk.Entry(app)
 length_entry.pack()
+
 special_chars_var = tk.IntVar()
 special_chars_check = tk.Checkbutton(app, text="Use Special Characters", variable=special_chars_var)
 special_chars_check.pack()
+
 lowercase_chars_var = tk.IntVar()
 lowercase_chars_check = tk.Checkbutton(app, text="Use Lowercase Characters", variable=lowercase_chars_var)
 lowercase_chars_check.pack()
 uppercase_chars_var = tk.IntVar()
 uppercase_chars_check = tk.Checkbutton(app, text="Use Uppercase Characters", variable=uppercase_chars_var)
 uppercase_chars_check.pack()
+
 numbers_var = tk.IntVar()
 numbers_check = tk.Checkbutton(app, text="Use Numbers", variable=numbers_var)
 numbers_check.pack()
