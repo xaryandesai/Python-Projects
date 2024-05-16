@@ -14,8 +14,10 @@ inp2=Entry(tk)
 inp2.pack()
 lbl1=Label(tk,text="Conversion Currency: ")
 lbl1.pack()
+
 inp3=Entry(tk)
 inp3.pack()
+
 def fun1():
     inp4.delete("0",END)
     a=CurrencyConverter()
@@ -31,7 +33,6 @@ btn1.pack()
 
 inp4=Entry(tk)
 inp4.pack()
-
 
 tk.mainloop()
 
